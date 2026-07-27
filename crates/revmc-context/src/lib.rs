@@ -136,9 +136,12 @@ const _: () = {
     // Key fields accessed by JIT code
     assert!(offset_of!(EvmContext<'_>, memory) == 0);
     assert!(offset_of!(EvmContext<'_>, gas) == 16);
-    assert!(offset_of!(EvmContext<'_>, spec_id) == 121);
-    assert!(offset_of!(EvmContext<'_>, resume_at) == 128);
-    assert!(offset_of!(EvmContext<'_>, calldatasize) == 168);
+    // `Gas` grew when the reservoir accounting fields were added. Derive these
+    // offsets from its ABI size so revmc remains compatible with both the
+    // published Revm release and the EIP-8141 Revm branch used by Reth.
+    assert!(offset_of!(EvmContext<'_>, spec_id) == 57 + core::mem::size_of::<Gas>());
+    assert!(offset_of!(EvmContext<'_>, resume_at) == 64 + core::mem::size_of::<Gas>());
+    assert!(offset_of!(EvmContext<'_>, calldatasize) == 104 + core::mem::size_of::<Gas>());
 };
 
 impl fmt::Debug for EvmContext<'_> {
