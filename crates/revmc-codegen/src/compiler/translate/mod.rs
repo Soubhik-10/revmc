@@ -2120,6 +2120,8 @@ mod pf {
         pub(super) state_gas_spilled: u64,
         /// Refunded gas.
         pub(super) refunded: i64,
+        /// Whether state gas is an explicit frame-local budget.
+        pub(super) state_gas_isolated: bool,
     }
 
     #[repr(C)]
