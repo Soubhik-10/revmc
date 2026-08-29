@@ -61,6 +61,15 @@ llvm-prefer-dynamic = ["llvm", "revmc/llvm-prefer-dynamic"]
 
 tracy = ["dep:tracing-tracy"]
 
+# Enables opaque account payloads in revm; disabled by default.
+account-ext = [
+    "revmc/account-ext",
+    "revmc-statetest/account-ext",
+    "revm-context/account-ext",
+    "revm-context-interface/account-ext",
+    "revm-state/account-ext",
+]
+
 [[bin]]
 name = "revmc"
 path = "src/main.rs"

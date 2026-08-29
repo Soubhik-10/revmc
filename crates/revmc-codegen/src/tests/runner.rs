@@ -398,7 +398,7 @@ impl Host for TestHost {
         };
 
         // Create owned account info
-        let info = AccountInfo { balance, nonce: 0, code_hash, account_id: None, code };
+        let info = AccountInfo { balance, nonce: 0, code_hash, code, ..Default::default() };
 
         let is_empty = info.code.is_none() && info.balance.is_zero() && info.nonce == 0;
 
@@ -442,6 +442,7 @@ pub fn with_evm_context<F: FnOnce(&mut EvmContext<'_>, &mut EvmStack, &mut usize
         caller_address: DEF_CALLER,
         input: CallInput::Bytes(Bytes::from_static(DEF_CD)),
         call_value: DEF_VALUE,
+        depth: 0,
     };
 
     let bytecode_obj = revm_bytecode::Bytecode::new_raw(Bytes::copy_from_slice(bytecode));
@@ -512,6 +513,7 @@ fn run_compiled_test_case(test_case: &TestCase<'_>, f: EvmCompilerFn) {
             caller_address: DEF_CALLER,
             input: CallInput::Bytes(Bytes::from_static(DEF_CD)),
             call_value: DEF_VALUE,
+            depth: 0,
         };
         let bytecode_obj = revm_bytecode::Bytecode::new_raw(Bytes::copy_from_slice(bytecode));
         let ext_bytecode = ExtBytecode::new(bytecode_obj);

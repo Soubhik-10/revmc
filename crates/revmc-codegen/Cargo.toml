@@ -76,3 +76,12 @@ asm-keccak = ["alloy-primitives/asm-keccak"]
 
 # Internal features.
 __fuzzing = ["dep:arbitrary", "dep:paste", "dep:similar-asserts", "dep:tracing-subscriber"]
+
+# Enables opaque account payloads in revm; disabled by default.
+account-ext = [
+    "revmc-builtins/account-ext",
+    "revmc-context/account-ext",
+    "revm-context/account-ext",
+    "revm-context-interface/account-ext",
+    "revm-state/account-ext",
+]
