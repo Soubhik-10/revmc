@@ -815,7 +815,6 @@ pub unsafe extern "C" fn __revmc_builtin_call(
             scheme: call_kind.into(),
             is_static: ecx.is_static || call_kind == CallKind::StaticCall,
             reservoir: ecx.gas.reservoir(),
-            state_gas_isolated: ecx.gas.state_gas_isolated(),
             entry_gas: 0,
             charged_new_account_state_gas,
         }),
