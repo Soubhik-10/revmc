@@ -14,13 +14,16 @@ use alloy_evm::{
 use alloy_primitives::{Address, Bytes};
 use revm_context::{BlockEnv, Evm as RevmEvm, TxEnv};
 use revm_context_interface::{
-    DBErrorMarker,
+    ContextSetters, DBErrorMarker,
     result::{EVMError, HaltReason, ResultAndState},
 };
 use revm_handler::{
-    EthFrame, ExecuteEvm, PrecompileProvider, SystemCallEvm, instructions::EthInstructions,
+    EthFrame, ExecuteEvm, MainnetHandler, PrecompileProvider, SystemCallEvm,
+    instructions::EthInstructions,
 };
-use revm_inspector::{InspectEvm, InspectSystemCallEvm, Inspector, NoOpInspector};
+use revm_inspector::{
+    InspectEvm, InspectSystemCallEvm, Inspector, InspectorHandler, NoOpInspector,
+};
 use revm_interpreter::{InterpreterResult, interpreter::EthInterpreter};
 use revm_primitives::hardfork::SpecId;
 
@@ -117,6 +120,26 @@ where
         } else {
             self.inner.system_call_with_caller(caller, contract, data)
         }
+    }
+
+    fn validate_frame_transaction(
+        &mut self,
+        tx: Self::Tx,
+        prefix_end: usize,
+    ) -> Option<Result<revm_handler::eip8141::FrameValidationResult, Self::Error>> {
+        // Prefix validation is bounded interpreter work. Preserve inspector hooks and configured
+        // precompiles without scheduling compilation of untrusted validation-only bytecode.
+        let inner = self.inner.inner_mut();
+        inner.ctx.set_tx(tx);
+        Some(if self.inspect {
+            MainnetHandler::default().inspect_validate_prefix(inner, prefix_end)
+        } else {
+            revm_handler::eip8141::validate_prefix(
+                &mut MainnetHandler::default(),
+                inner,
+                prefix_end,
+            )
+        })
     }
 
     fn finish(self) -> (Self::DB, EvmEnv<Self::Spec>) {
