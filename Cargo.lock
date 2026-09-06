@@ -57,11 +57,10 @@ dependencies = [
 
 [[package]]
 name = "alloy-consensus"
-version = "2.0.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "83447eeb17816e172f1dfc0db1f9dc0b7c5d069bd1f7cecbecceb382bf931015"
+version = "2.4.1"
+source = "git+https://github.com/Rimeeeeee/alloy?rev=c395a28b8f2146245af3805faa05ad00c9d22864#c395a28b8f2146245af3805faa05ad00c9d22864"
 dependencies = [
- "alloy-eips 2.0.5",
+ "alloy-eips",
  "alloy-primitives",
  "alloy-rlp",
  "alloy-trie",
@@ -115,18 +114,6 @@ dependencies = [
 
 [[package]]
 name = "alloy-eip7928"
-version = "0.3.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6b827a6d7784fe3eb3489d40699407a4cdcce74271421a01bdffe60cf573bb16"
-dependencies = [
- "alloy-primitives",
- "alloy-rlp",
- "once_cell",
- "thiserror 2.0.18",
-]
-
-[[package]]
-name = "alloy-eip7928"
 version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "55c4584eaf235a861172e30d0d8adfa95957186f59b93f997851df90b32da7ba"
@@ -142,7 +129,7 @@ dependencies = [
 [[package]]
 name = "alloy-eip8141"
 version = "0.1.0"
-source = "git+https://github.com/Soubhik-10/eips?branch=feat%2Feip8141-basic-types#147c25f9aa02603d42065e467c52ceeed68691da"
+source = "git+https://github.com/Soubhik-10/eips?rev=497889d89afe57b395c2ab67c21da7d5bfa554ee#497889d89afe57b395c2ab67c21da7d5bfa554ee"
 dependencies = [
  "alloy-primitives",
  "alloy-rlp",
@@ -152,31 +139,13 @@ dependencies = [
 
 [[package]]
 name = "alloy-eips"
-version = "2.0.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0dca4c89ace90684b4b77366d00631ed498c9af962079af2a5dbc593a0618a77"
-dependencies = [
- "alloy-eip2124",
- "alloy-eip2930",
- "alloy-eip7702",
- "alloy-eip7928 0.3.7",
- "alloy-primitives",
- "alloy-rlp",
- "auto_impl",
- "derive_more",
- "either",
- "sha2 0.10.9",
-]
-
-[[package]]
-name = "alloy-eips"
 version = "2.4.1"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=feat%2Feip8141-transaction#b69885ed00fb718c951404288cfe5ad63578c830"
+source = "git+https://github.com/Rimeeeeee/alloy?rev=c395a28b8f2146245af3805faa05ad00c9d22864#c395a28b8f2146245af3805faa05ad00c9d22864"
 dependencies = [
  "alloy-eip2124",
  "alloy-eip2930",
  "alloy-eip7702",
- "alloy-eip7928 0.4.3",
+ "alloy-eip7928",
  "alloy-eip8141",
  "alloy-primitives",
  "alloy-rlp",
@@ -194,11 +163,10 @@ dependencies = [
 [[package]]
 name = "alloy-evm"
 version = "0.39.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7b6bd5f7e5ce9858bac99275e3f548c3b63bb3e5806da0142dc0b2f518d3ec4a"
+source = "git+https://github.com/Soubhik-10/evm?rev=081447b9ad708c506fc09e38963d8c3a0f20324b#081447b9ad708c506fc09e38963d8c3a0f20324b"
 dependencies = [
  "alloy-consensus",
- "alloy-eips 2.0.5",
+ "alloy-eips",
  "alloy-hardforks",
  "alloy-primitives",
  "alloy-sol-types",
@@ -211,9 +179,9 @@ dependencies = [
 
 [[package]]
 name = "alloy-hardforks"
-version = "0.4.7"
+version = "0.4.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "83ba208044232d14d4adbfa77e57d6329f51bc1acc21f5667bb7db72d88a0831"
+checksum = "865371fb677c005f7cb0ea9c2847a1ba4fdb042caf6428b1769fee20368bbfc7"
 dependencies = [
  "alloy-chains",
  "alloy-eip2124",
@@ -275,7 +243,7 @@ dependencies = [
 [[package]]
 name = "alloy-serde"
 version = "2.4.1"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=feat%2Feip8141-transaction#b69885ed00fb718c951404288cfe5ad63578c830"
+source = "git+https://github.com/Rimeeeeee/alloy?rev=c395a28b8f2146245af3805faa05ad00c9d22864#c395a28b8f2146245af3805faa05ad00c9d22864"
 dependencies = [
  "alloy-primitives",
  "serde",
@@ -358,9 +326,8 @@ dependencies = [
 
 [[package]]
 name = "alloy-tx-macros"
-version = "2.0.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "01a0035943b75fe1e249f52e688492d7a1b1826bc2d19b8e1d5d3c24a2ad8f50"
+version = "2.4.1"
+source = "git+https://github.com/Rimeeeeee/alloy?rev=c395a28b8f2146245af3805faa05ad00c9d22864#c395a28b8f2146245af3805faa05ad00c9d22864"
 dependencies = [
  "darling",
  "proc-macro2",
@@ -3122,160 +3089,90 @@ checksum = "d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4"
 [[package]]
 name = "revm"
 version = "43.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b0d1681d52ee61171b838db4924827f63d659d4c3ad559aa3a57003f3dda3f7c"
+source = "git+https://github.com/Soubhik-10/revm?rev=50a0c579fa95d087f75c4a470f9ec07db97c9ae3#50a0c579fa95d087f75c4a470f9ec07db97c9ae3"
 dependencies = [
- "revm-bytecode 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-context 43.0.0",
- "revm-context-interface 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-database 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-database-interface 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-handler 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-inspector 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-interpreter 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-precompile 43.0.0",
- "revm-primitives 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-state 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "revm-bytecode",
+ "revm-context",
+ "revm-context-interface",
+ "revm-database",
+ "revm-database-interface",
+ "revm-handler",
+ "revm-inspector",
+ "revm-interpreter",
+ "revm-precompile",
+ "revm-primitives",
+ "revm-state",
 ]
 
 [[package]]
 name = "revm-bytecode"
 version = "43.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c8d38e16b72ec1c836ec8490562bfb21003165ea8bc496086bf345680a6e6c41"
-dependencies = [
- "bitvec",
- "revm-primitives 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "revm-bytecode"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#5ab419586297414dcfdb7876526becf340b057a9"
+source = "git+https://github.com/Soubhik-10/revm?rev=50a0c579fa95d087f75c4a470f9ec07db97c9ae3#50a0c579fa95d087f75c4a470f9ec07db97c9ae3"
 dependencies = [
  "bitvec",
  "paste",
  "phf",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-primitives",
  "serde",
-]
-
-[[package]]
-name = "revm-context"
-version = "43.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "67822069c254eb83e95fa5912a0d1324dd176f6ea05e8f110671ad242e27d61b"
-dependencies = [
- "bitvec",
- "cfg-if",
- "derive-where",
- "revm-bytecode 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-context-interface 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-database-interface 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-primitives 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-state 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "revm-context"
 version = "43.0.1"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#5ab419586297414dcfdb7876526becf340b057a9"
+source = "git+https://github.com/Soubhik-10/revm?rev=50a0c579fa95d087f75c4a470f9ec07db97c9ae3#50a0c579fa95d087f75c4a470f9ec07db97c9ae3"
 dependencies = [
  "alloy-eip8141",
  "bitvec",
  "cfg-if",
  "derive-where",
- "revm-bytecode 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-context-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-database-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-state 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-bytecode",
+ "revm-context-interface",
+ "revm-database-interface",
+ "revm-primitives",
+ "revm-state",
  "serde",
- "tracing",
 ]
 
 [[package]]
 name = "revm-context-interface"
 version = "43.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d97d0c7f8bdf65601d35ed27cf6b0f0bd436087f0a97a52aa767a49bbcea8373"
-dependencies = [
- "alloy-eip2930",
- "alloy-eip7702",
- "auto_impl",
- "either",
- "revm-database-interface 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-primitives 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-state 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "revm-context-interface"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#5ab419586297414dcfdb7876526becf340b057a9"
+source = "git+https://github.com/Soubhik-10/revm?rev=50a0c579fa95d087f75c4a470f9ec07db97c9ae3#50a0c579fa95d087f75c4a470f9ec07db97c9ae3"
 dependencies = [
  "alloy-eip2930",
  "alloy-eip7702",
  "alloy-eip8141",
  "auto_impl",
  "either",
- "revm-database-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-state 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-database-interface",
+ "revm-primitives",
+ "revm-state",
  "serde",
 ]
 
 [[package]]
 name = "revm-database"
 version = "43.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "31d764afa9a1c9278c05d40461b07319d21ccb39c1bdf0e9dde7e5ea7d9be53d"
+source = "git+https://github.com/Soubhik-10/revm?rev=50a0c579fa95d087f75c4a470f9ec07db97c9ae3#50a0c579fa95d087f75c4a470f9ec07db97c9ae3"
 dependencies = [
+ "alloy-eips",
  "derive_more",
  "either",
- "revm-bytecode 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-database-interface 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-primitives 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-state 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "revm-database"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#5ab419586297414dcfdb7876526becf340b057a9"
-dependencies = [
- "alloy-eips 2.4.1",
- "derive_more",
- "either",
- "revm-bytecode 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-database-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-state 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-bytecode",
+ "revm-database-interface",
+ "revm-primitives",
+ "revm-state",
  "serde",
 ]
 
 [[package]]
 name = "revm-database-interface"
 version = "43.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d2a27e4440c2ef4932afdaa28a1d1ac8601504c7030c1a387b5e307d07d864d1"
+source = "git+https://github.com/Soubhik-10/revm?rev=50a0c579fa95d087f75c4a470f9ec07db97c9ae3#50a0c579fa95d087f75c4a470f9ec07db97c9ae3"
 dependencies = [
  "auto_impl",
  "either",
- "revm-primitives 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-state 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "thiserror 2.0.18",
-]
-
-[[package]]
-name = "revm-database-interface"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#5ab419586297414dcfdb7876526becf340b057a9"
-dependencies = [
- "auto_impl",
- "either",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-state 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-primitives",
+ "revm-state",
  "serde",
  "thiserror 2.0.18",
 ]
@@ -3283,70 +3180,35 @@ dependencies = [
 [[package]]
 name = "revm-handler"
 version = "43.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ab0b5923be8784704d119be5381d76a602f65e4a9991650bb87291565bd0d8ec"
-dependencies = [
- "auto_impl",
- "derive-where",
- "revm-bytecode 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-context 43.0.0",
- "revm-context-interface 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-database-interface 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-interpreter 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-precompile 43.0.0",
- "revm-primitives 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-state 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "revm-handler"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#5ab419586297414dcfdb7876526becf340b057a9"
+source = "git+https://github.com/Soubhik-10/revm?rev=50a0c579fa95d087f75c4a470f9ec07db97c9ae3#50a0c579fa95d087f75c4a470f9ec07db97c9ae3"
 dependencies = [
  "alloy-eip8141",
  "auto_impl",
  "derive-where",
- "revm-bytecode 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-context 43.0.1",
- "revm-context-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-database-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-interpreter 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-precompile 43.0.1",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-state 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-bytecode",
+ "revm-context",
+ "revm-context-interface",
+ "revm-database-interface",
+ "revm-interpreter",
+ "revm-precompile",
+ "revm-primitives",
+ "revm-state",
  "serde",
- "tracing",
 ]
 
 [[package]]
 name = "revm-inspector"
 version = "43.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a988ad0879bd81b269cad53c235a8ce87cd44a7c1de7d21a6ff3dd9e9f3e70a9"
+source = "git+https://github.com/Soubhik-10/revm?rev=50a0c579fa95d087f75c4a470f9ec07db97c9ae3#50a0c579fa95d087f75c4a470f9ec07db97c9ae3"
 dependencies = [
  "auto_impl",
  "either",
- "revm-context 43.0.0",
- "revm-database-interface 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-handler 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-interpreter 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-primitives 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-state 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "revm-inspector"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#5ab419586297414dcfdb7876526becf340b057a9"
-dependencies = [
- "auto_impl",
- "either",
- "revm-context 43.0.1",
- "revm-database-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-handler 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-interpreter 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-state 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-context",
+ "revm-database-interface",
+ "revm-handler",
+ "revm-interpreter",
+ "revm-primitives",
+ "revm-state",
  "serde",
  "serde_json",
 ]
@@ -3354,54 +3216,19 @@ dependencies = [
 [[package]]
 name = "revm-interpreter"
 version = "43.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7ddc442e3c5006ebb65f479e9e8fded7fc10f300c040276e825eee81e00c94cc"
+source = "git+https://github.com/Soubhik-10/revm?rev=50a0c579fa95d087f75c4a470f9ec07db97c9ae3#50a0c579fa95d087f75c4a470f9ec07db97c9ae3"
 dependencies = [
- "revm-bytecode 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-context-interface 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-primitives 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-state 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "revm-interpreter"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#5ab419586297414dcfdb7876526becf340b057a9"
-dependencies = [
- "revm-bytecode 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-context-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-state 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-bytecode",
+ "revm-context-interface",
+ "revm-primitives",
+ "revm-state",
  "serde",
- "tracing",
-]
-
-[[package]]
-name = "revm-precompile"
-version = "43.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d85f7a8906482f8d18f2a2c793bc4daf254b29465af4285268384505ce6ee308"
-dependencies = [
- "ark-bls12-381",
- "ark-bn254",
- "ark-ec",
- "ark-ff 0.6.0",
- "ark-serialize 0.6.0",
- "arrayref",
- "aurora-engine-modexp",
- "cfg-if",
- "k256",
- "p256",
- "revm-context-interface 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-primitives 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ripemd",
- "sha2 0.11.0",
 ]
 
 [[package]]
 name = "revm-precompile"
 version = "43.0.1"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#5ab419586297414dcfdb7876526becf340b057a9"
+source = "git+https://github.com/Soubhik-10/revm?rev=50a0c579fa95d087f75c4a470f9ec07db97c9ae3#50a0c579fa95d087f75c4a470f9ec07db97c9ae3"
 dependencies = [
  "ark-bls12-381",
  "ark-bn254",
@@ -3414,8 +3241,8 @@ dependencies = [
  "cfg-if",
  "k256",
  "p256",
- "revm-context-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-context-interface",
+ "revm-primitives",
  "ripemd",
  "secp256k1",
  "sha2 0.11.0",
@@ -3424,17 +3251,7 @@ dependencies = [
 [[package]]
 name = "revm-primitives"
 version = "43.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f1f4ba1a5757fe4398262290422c371556fcebf236f762f7ed7ff2c56768a63c"
-dependencies = [
- "alloy-primitives",
- "once_cell",
-]
-
-[[package]]
-name = "revm-primitives"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#5ab419586297414dcfdb7876526becf340b057a9"
+source = "git+https://github.com/Soubhik-10/revm?rev=50a0c579fa95d087f75c4a470f9ec07db97c9ae3#50a0c579fa95d087f75c4a470f9ec07db97c9ae3"
 dependencies = [
  "alloy-primitives",
  "once_cell",
@@ -3444,41 +3261,28 @@ dependencies = [
 [[package]]
 name = "revm-state"
 version = "43.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7cd02082cf1baca01e8bc17456c45136bdc66632395a98db1c1a2afe4c6ea87f"
+source = "git+https://github.com/Soubhik-10/revm?rev=50a0c579fa95d087f75c4a470f9ec07db97c9ae3#50a0c579fa95d087f75c4a470f9ec07db97c9ae3"
 dependencies = [
- "alloy-eip7928 0.4.3",
+ "alloy-eip7928",
  "bitflags",
  "nonmax",
- "revm-bytecode 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "revm-primitives 43.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "revm-state"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#5ab419586297414dcfdb7876526becf340b057a9"
-dependencies = [
- "alloy-eip7928 0.4.3",
- "bitflags",
- "nonmax",
- "revm-bytecode 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-bytecode",
+ "revm-primitives",
  "serde",
 ]
 
 [[package]]
 name = "revm-statetest-types"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#5ab419586297414dcfdb7876526becf340b057a9"
+source = "git+https://github.com/Soubhik-10/revm?rev=50a0c579fa95d087f75c4a470f9ec07db97c9ae3#50a0c579fa95d087f75c4a470f9ec07db97c9ae3"
 dependencies = [
- "alloy-eip7928 0.4.3",
+ "alloy-eip7928",
  "k256",
- "revm-context 43.0.1",
- "revm-context-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-database 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-state 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-context",
+ "revm-context-interface",
+ "revm-database",
+ "revm-primitives",
+ "revm-state",
  "serde",
  "serde_json",
  "thiserror 2.0.18",
@@ -3488,12 +3292,12 @@ dependencies = [
 name = "revmc"
 version = "0.1.0"
 dependencies = [
- "revm-bytecode 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-context-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-handler 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-inspector 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-interpreter 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-bytecode",
+ "revm-context-interface",
+ "revm-handler",
+ "revm-inspector",
+ "revm-interpreter",
+ "revm-primitives",
  "revmc-backend",
  "revmc-build",
  "revmc-builtins",
@@ -3521,10 +3325,10 @@ name = "revmc-builtins"
 version = "0.1.0"
 dependencies = [
  "paste",
- "revm-bytecode 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-context-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-interpreter 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-bytecode",
+ "revm-context-interface",
+ "revm-interpreter",
+ "revm-primitives",
  "revmc-backend",
  "revmc-context",
  "tracing",
@@ -3541,15 +3345,15 @@ dependencies = [
  "hex",
  "libloading",
  "open",
- "revm-bytecode 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-context 43.0.1",
- "revm-context-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-database 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-database-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-handler 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-interpreter 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-state 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-bytecode",
+ "revm-context",
+ "revm-context-interface",
+ "revm-database",
+ "revm-database-interface",
+ "revm-handler",
+ "revm-interpreter",
+ "revm-primitives",
+ "revm-state",
  "revm-statetest-types",
  "revmc",
  "revmc-build",
@@ -3582,15 +3386,15 @@ dependencies = [
  "indexmap 2.14.0",
  "oxc_index",
  "paste",
- "revm-bytecode 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-context 43.0.1",
- "revm-context-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-database-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-handler 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-inspector 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-interpreter 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-state 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-bytecode",
+ "revm-context",
+ "revm-context-interface",
+ "revm-database-interface",
+ "revm-handler",
+ "revm-inspector",
+ "revm-interpreter",
+ "revm-primitives",
+ "revm-state",
  "revmc-backend",
  "revmc-build",
  "revmc-builtins",
@@ -3610,13 +3414,13 @@ dependencies = [
 name = "revmc-context"
 version = "0.1.0"
 dependencies = [
- "revm-context 43.0.1",
- "revm-context-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-handler 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-inspector 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-interpreter 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-state 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-context",
+ "revm-context-interface",
+ "revm-handler",
+ "revm-inspector",
+ "revm-interpreter",
+ "revm-primitives",
+ "revm-state",
  "ruint",
 ]
 
@@ -3635,13 +3439,13 @@ name = "revmc-examples-runner"
 version = "0.1.0"
 dependencies = [
  "cc",
- "revm-bytecode 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-context 43.0.1",
- "revm-database 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-database-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-handler 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-state 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-bytecode",
+ "revm-context",
+ "revm-database",
+ "revm-database-interface",
+ "revm-handler",
+ "revm-primitives",
+ "revm-state",
  "revmc",
  "revmc-build",
  "revmc-builtins",
@@ -3686,16 +3490,16 @@ dependencies = [
  "paste",
  "quanta",
  "rayon",
- "revm-bytecode 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-context 43.0.1",
- "revm-context-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-database 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-database-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-handler 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-inspector 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-interpreter 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-state 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-bytecode",
+ "revm-context",
+ "revm-context-interface",
+ "revm-database",
+ "revm-database-interface",
+ "revm-handler",
+ "revm-inspector",
+ "revm-interpreter",
+ "revm-primitives",
+ "revm-state",
  "revmc-backend",
  "revmc-builtins",
  "revmc-codegen",
@@ -3722,16 +3526,16 @@ dependencies = [
  "indicatif",
  "k256",
  "libloading",
- "revm-bytecode 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-context 43.0.1",
- "revm-context-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-database 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-database-interface 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-handler 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-inspector 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-interpreter 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-primitives 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
- "revm-state 43.0.0 (git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions)",
+ "revm-bytecode",
+ "revm-context",
+ "revm-context-interface",
+ "revm-database",
+ "revm-database-interface",
+ "revm-handler",
+ "revm-inspector",
+ "revm-interpreter",
+ "revm-primitives",
+ "revm-state",
  "revm-statetest-types",
  "revmc",
  "serde_json",
