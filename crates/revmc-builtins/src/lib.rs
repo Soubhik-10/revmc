@@ -817,6 +817,8 @@ pub unsafe extern "C" fn __revmc_builtin_call(
             reservoir: ecx.gas.reservoir(),
             state_gas_isolated: ecx.gas.state_gas_isolated(),
             entry_gas: 0,
+            // CALL has already charged any applicable state costs.
+            entry_state_gas: 0,
             charged_new_account_state_gas,
         }),
     )));
