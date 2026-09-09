@@ -47,19 +47,19 @@ revmc-runtime = { version = "0.1.0", path = "crates/revmc-runtime", default-feat
 
 alloy-primitives = { version = "1.6.0", default-features = false }
 ruint = { version = "1.18", default-features = false }
-alloy-evm = { git = "https://github.com/Soubhik-10/evm", rev = "bca84e02f28881efe18f4dfef5ec79eb29a85aad", version = "0.39.0", default-features = false }
+alloy-evm = { git = "https://github.com/Soubhik-10/evm", rev = "01d7425ed63a09ccea0ea0eb203cc3f3f52bd575", version = "0.39.0", default-features = false }
 
-revm-bytecode = { git = "https://github.com/Soubhik-10/revm", rev = "14eb71cb001794d5f911db015eb8e08585f0beaf", version = "43.0.0", default-features = false, features = ["parse"] }
-revm-context = { git = "https://github.com/Soubhik-10/revm", rev = "14eb71cb001794d5f911db015eb8e08585f0beaf", version = "43.0.0", default-features = false }
-revm-context-interface = { git = "https://github.com/Soubhik-10/revm", rev = "14eb71cb001794d5f911db015eb8e08585f0beaf", version = "43.0.0", default-features = false }
-revm-database = { git = "https://github.com/Soubhik-10/revm", rev = "14eb71cb001794d5f911db015eb8e08585f0beaf", version = "43.0.0", default-features = false }
-revm-database-interface = { git = "https://github.com/Soubhik-10/revm", rev = "14eb71cb001794d5f911db015eb8e08585f0beaf", version = "43.0.0", default-features = false }
-revm-handler = { git = "https://github.com/Soubhik-10/revm", rev = "14eb71cb001794d5f911db015eb8e08585f0beaf", version = "43.0.0", default-features = false }
-revm-inspector = { git = "https://github.com/Soubhik-10/revm", rev = "14eb71cb001794d5f911db015eb8e08585f0beaf", version = "43.0.0", default-features = false }
-revm-interpreter = { git = "https://github.com/Soubhik-10/revm", rev = "14eb71cb001794d5f911db015eb8e08585f0beaf", version = "43.0.0", default-features = false }
-revm-primitives = { git = "https://github.com/Soubhik-10/revm", rev = "14eb71cb001794d5f911db015eb8e08585f0beaf", version = "43.0.0", default-features = false }
-revm-state = { git = "https://github.com/Soubhik-10/revm", rev = "14eb71cb001794d5f911db015eb8e08585f0beaf", version = "43.0.0", default-features = false }
-revm-statetest-types = { git = "https://github.com/Soubhik-10/revm", rev = "14eb71cb001794d5f911db015eb8e08585f0beaf", version = "43.0.0", default-features = false }
+revm-bytecode = { git = "https://github.com/Soubhik-10/revm", rev = "2ae17b5e1bae054c46aa44c12873e3e7e9cd014e", version = "43.0.0", default-features = false, features = ["parse"] }
+revm-context = { git = "https://github.com/Soubhik-10/revm", rev = "2ae17b5e1bae054c46aa44c12873e3e7e9cd014e", version = "43.0.0", default-features = false }
+revm-context-interface = { git = "https://github.com/Soubhik-10/revm", rev = "2ae17b5e1bae054c46aa44c12873e3e7e9cd014e", version = "43.0.0", default-features = false }
+revm-database = { git = "https://github.com/Soubhik-10/revm", rev = "2ae17b5e1bae054c46aa44c12873e3e7e9cd014e", version = "43.0.0", default-features = false }
+revm-database-interface = { git = "https://github.com/Soubhik-10/revm", rev = "2ae17b5e1bae054c46aa44c12873e3e7e9cd014e", version = "43.0.0", default-features = false }
+revm-handler = { git = "https://github.com/Soubhik-10/revm", rev = "2ae17b5e1bae054c46aa44c12873e3e7e9cd014e", version = "43.0.0", default-features = false }
+revm-inspector = { git = "https://github.com/Soubhik-10/revm", rev = "2ae17b5e1bae054c46aa44c12873e3e7e9cd014e", version = "43.0.0", default-features = false }
+revm-interpreter = { git = "https://github.com/Soubhik-10/revm", rev = "2ae17b5e1bae054c46aa44c12873e3e7e9cd014e", version = "43.0.0", default-features = false }
+revm-primitives = { git = "https://github.com/Soubhik-10/revm", rev = "2ae17b5e1bae054c46aa44c12873e3e7e9cd014e", version = "43.0.0", default-features = false }
+revm-state = { git = "https://github.com/Soubhik-10/revm", rev = "2ae17b5e1bae054c46aa44c12873e3e7e9cd014e", version = "43.0.0", default-features = false }
+revm-statetest-types = { git = "https://github.com/Soubhik-10/revm", rev = "2ae17b5e1bae054c46aa44c12873e3e7e9cd014e", version = "43.0.0", default-features = false }
 
 crossbeam-channel = "0.5"
 crossbeam-queue = "0.3"
