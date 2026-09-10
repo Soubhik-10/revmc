@@ -163,7 +163,7 @@ dependencies = [
 [[package]]
 name = "alloy-evm"
 version = "0.39.0"
-source = "git+https://github.com/Soubhik-10/evm?rev=a04b27a8815401b137907856b9cc8ac12a701ca0#a04b27a8815401b137907856b9cc8ac12a701ca0"
+source = "git+https://github.com/Soubhik-10/evm?rev=5ad553f277fcdf5d69e2cdf2ad20a11bb8ebfee1#5ad553f277fcdf5d69e2cdf2ad20a11bb8ebfee1"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -3088,8 +3088,8 @@ checksum = "d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4"
 
 [[package]]
 name = "revm"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?rev=c52ae0689c7684142ec2c4d5748ce9b21a46a3e8#c52ae0689c7684142ec2c4d5748ce9b21a46a3e8"
+version = "43.0.2"
+source = "git+https://github.com/Soubhik-10/revm?rev=1076959073242fa4cddc93d6309351a839a6fa54#1076959073242fa4cddc93d6309351a839a6fa54"
 dependencies = [
  "revm-bytecode",
  "revm-context",
@@ -3107,7 +3107,7 @@ dependencies = [
 [[package]]
 name = "revm-bytecode"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?rev=c52ae0689c7684142ec2c4d5748ce9b21a46a3e8#c52ae0689c7684142ec2c4d5748ce9b21a46a3e8"
+source = "git+https://github.com/Soubhik-10/revm?rev=1076959073242fa4cddc93d6309351a839a6fa54#1076959073242fa4cddc93d6309351a839a6fa54"
 dependencies = [
  "bitvec",
  "paste",
@@ -3118,8 +3118,8 @@ dependencies = [
 
 [[package]]
 name = "revm-context"
-version = "43.0.1"
-source = "git+https://github.com/Soubhik-10/revm?rev=c52ae0689c7684142ec2c4d5748ce9b21a46a3e8#c52ae0689c7684142ec2c4d5748ce9b21a46a3e8"
+version = "43.0.2"
+source = "git+https://github.com/Soubhik-10/revm?rev=1076959073242fa4cddc93d6309351a839a6fa54#1076959073242fa4cddc93d6309351a839a6fa54"
 dependencies = [
  "alloy-eip8141",
  "bitvec",
@@ -3135,8 +3135,8 @@ dependencies = [
 
 [[package]]
 name = "revm-context-interface"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?rev=c52ae0689c7684142ec2c4d5748ce9b21a46a3e8#c52ae0689c7684142ec2c4d5748ce9b21a46a3e8"
+version = "43.0.1"
+source = "git+https://github.com/Soubhik-10/revm?rev=1076959073242fa4cddc93d6309351a839a6fa54#1076959073242fa4cddc93d6309351a839a6fa54"
 dependencies = [
  "alloy-eip2930",
  "alloy-eip7702",
@@ -3152,7 +3152,7 @@ dependencies = [
 [[package]]
 name = "revm-database"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?rev=c52ae0689c7684142ec2c4d5748ce9b21a46a3e8#c52ae0689c7684142ec2c4d5748ce9b21a46a3e8"
+source = "git+https://github.com/Soubhik-10/revm?rev=1076959073242fa4cddc93d6309351a839a6fa54#1076959073242fa4cddc93d6309351a839a6fa54"
 dependencies = [
  "alloy-eips",
  "derive_more",
@@ -3167,7 +3167,7 @@ dependencies = [
 [[package]]
 name = "revm-database-interface"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?rev=c52ae0689c7684142ec2c4d5748ce9b21a46a3e8#c52ae0689c7684142ec2c4d5748ce9b21a46a3e8"
+source = "git+https://github.com/Soubhik-10/revm?rev=1076959073242fa4cddc93d6309351a839a6fa54#1076959073242fa4cddc93d6309351a839a6fa54"
 dependencies = [
  "auto_impl",
  "either",
@@ -3179,8 +3179,8 @@ dependencies = [
 
 [[package]]
 name = "revm-handler"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?rev=c52ae0689c7684142ec2c4d5748ce9b21a46a3e8#c52ae0689c7684142ec2c4d5748ce9b21a46a3e8"
+version = "43.0.2"
+source = "git+https://github.com/Soubhik-10/revm?rev=1076959073242fa4cddc93d6309351a839a6fa54#1076959073242fa4cddc93d6309351a839a6fa54"
 dependencies = [
  "alloy-eip8141",
  "auto_impl",
@@ -3198,8 +3198,8 @@ dependencies = [
 
 [[package]]
 name = "revm-inspector"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?rev=c52ae0689c7684142ec2c4d5748ce9b21a46a3e8#c52ae0689c7684142ec2c4d5748ce9b21a46a3e8"
+version = "43.0.2"
+source = "git+https://github.com/Soubhik-10/revm?rev=1076959073242fa4cddc93d6309351a839a6fa54#1076959073242fa4cddc93d6309351a839a6fa54"
 dependencies = [
  "auto_impl",
  "either",
@@ -3215,8 +3215,8 @@ dependencies = [
 
 [[package]]
 name = "revm-interpreter"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?rev=c52ae0689c7684142ec2c4d5748ce9b21a46a3e8#c52ae0689c7684142ec2c4d5748ce9b21a46a3e8"
+version = "43.0.1"
+source = "git+https://github.com/Soubhik-10/revm?rev=1076959073242fa4cddc93d6309351a839a6fa54#1076959073242fa4cddc93d6309351a839a6fa54"
 dependencies = [
  "revm-bytecode",
  "revm-context-interface",
@@ -3227,8 +3227,8 @@ dependencies = [
 
 [[package]]
 name = "revm-precompile"
-version = "43.0.1"
-source = "git+https://github.com/Soubhik-10/revm?rev=c52ae0689c7684142ec2c4d5748ce9b21a46a3e8#c52ae0689c7684142ec2c4d5748ce9b21a46a3e8"
+version = "43.0.2"
+source = "git+https://github.com/Soubhik-10/revm?rev=1076959073242fa4cddc93d6309351a839a6fa54#1076959073242fa4cddc93d6309351a839a6fa54"
 dependencies = [
  "ark-bls12-381",
  "ark-bn254",
@@ -3251,7 +3251,7 @@ dependencies = [
 [[package]]
 name = "revm-primitives"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?rev=c52ae0689c7684142ec2c4d5748ce9b21a46a3e8#c52ae0689c7684142ec2c4d5748ce9b21a46a3e8"
+source = "git+https://github.com/Soubhik-10/revm?rev=1076959073242fa4cddc93d6309351a839a6fa54#1076959073242fa4cddc93d6309351a839a6fa54"
 dependencies = [
  "alloy-primitives",
  "once_cell",
@@ -3261,7 +3261,7 @@ dependencies = [
 [[package]]
 name = "revm-state"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?rev=c52ae0689c7684142ec2c4d5748ce9b21a46a3e8#c52ae0689c7684142ec2c4d5748ce9b21a46a3e8"
+source = "git+https://github.com/Soubhik-10/revm?rev=1076959073242fa4cddc93d6309351a839a6fa54#1076959073242fa4cddc93d6309351a839a6fa54"
 dependencies = [
  "alloy-eip7928",
  "bitflags",
@@ -3273,8 +3273,8 @@ dependencies = [
 
 [[package]]
 name = "revm-statetest-types"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?rev=c52ae0689c7684142ec2c4d5748ce9b21a46a3e8#c52ae0689c7684142ec2c4d5748ce9b21a46a3e8"
+version = "43.0.1"
+source = "git+https://github.com/Soubhik-10/revm?rev=1076959073242fa4cddc93d6309351a839a6fa54#1076959073242fa4cddc93d6309351a839a6fa54"
 dependencies = [
  "alloy-eip7928",
  "k256",
