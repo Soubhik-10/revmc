@@ -47,7 +47,7 @@ revmc-runtime = { version = "0.1.0", path = "crates/revmc-runtime", default-feat
 
 alloy-primitives = { version = "1.6.0", default-features = false }
 ruint = { version = "1.18", default-features = false }
-alloy-evm = { git = "https://github.com/Soubhik-10/evm", rev = "6d74f8d87dbd4448614be8326541c22b2ae42ca2", version = "0.39.0", default-features = false }
+alloy-evm = { git = "https://github.com/Soubhik-10/evm", rev = "654595c76b049c6a75f471433ad43113cac8b226", version = "0.39.0", default-features = false }
 
 revm-bytecode = { git = "https://github.com/Soubhik-10/revm", rev = "15be7dd958431c6b10ab27f4b6a387cd29d9cd6d", version = "43.0.0", default-features = false, features = ["parse"] }
 revm-context = { git = "https://github.com/Soubhik-10/revm", rev = "15be7dd958431c6b10ab27f4b6a387cd29d9cd6d", version = "43.0.0", default-features = false }
