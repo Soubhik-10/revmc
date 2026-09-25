@@ -47,7 +47,7 @@ revmc-runtime = { version = "0.1.0", path = "crates/revmc-runtime", default-feat
 
 alloy-primitives = { version = "1.6.0", default-features = false }
 ruint = { version = "1.18", default-features = false }
-alloy-evm = { version = "0.39.0", default-features = false }
+alloy-evm = { git = "https://github.com/Soubhik-10/evm", branch = "feat/eip8141", version = "0.39.0", default-features = false }
 
 revm-bytecode = { git = "https://github.com/Soubhik-10/revm", branch = "feat/eip8141-frame-transactions", version = "43.0.0", default-features = false, features = ["parse"] }
 revm-context = { git = "https://github.com/Soubhik-10/revm", branch = "feat/eip8141-frame-transactions", version = "43.0.0", default-features = false }
