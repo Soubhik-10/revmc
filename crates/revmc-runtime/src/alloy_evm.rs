@@ -14,11 +14,12 @@ use alloy_evm::{
 use alloy_primitives::{Address, Bytes};
 use revm_context::{BlockEnv, Evm as RevmEvm, TxEnv};
 use revm_context_interface::{
-    DBErrorMarker,
+    ContextSetters, DBErrorMarker,
     result::{EVMError, HaltReason, ResultAndState},
 };
 use revm_handler::{
-    EthFrame, ExecuteEvm, PrecompileProvider, SystemCallEvm, instructions::EthInstructions,
+    EthFrame, ExecuteEvm, MainnetHandler, PrecompileProvider, SystemCallEvm,
+    instructions::EthInstructions,
 };
 use revm_inspector::{
     InspectEvm, InspectSystemCallEvm, Inspector, InspectorHandler, NoOpInspector,
