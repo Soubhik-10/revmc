@@ -58,7 +58,7 @@ dependencies = [
 [[package]]
 name = "alloy-consensus"
 version = "2.4.1"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=feat%2Feip8141-transaction#f8bef1c5d7b9fabbb81de3d867ee98a4f0c7a4da"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=feat%2Feip7906-state-diff-integration#b3a94d4f145169e5e623d386f9cb33f7b46fbc14"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -128,8 +128,8 @@ dependencies = [
 
 [[package]]
 name = "alloy-eip8141"
-version = "0.1.0"
-source = "git+https://github.com/Soubhik-10/eips?rev=34e7c51884d47356a619dcc4629ea77ad96a6b23#34e7c51884d47356a619dcc4629ea77ad96a6b23"
+version = "0.1.1"
+source = "git+https://github.com/Rimeeeeee/eips?rev=77332dcce5fc1f17226802f615b136cbc6728c1a#77332dcce5fc1f17226802f615b136cbc6728c1a"
 dependencies = [
  "alloy-primitives",
  "alloy-rlp",
@@ -141,7 +141,7 @@ dependencies = [
 [[package]]
 name = "alloy-eips"
 version = "2.4.1"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=feat%2Feip8141-transaction#f8bef1c5d7b9fabbb81de3d867ee98a4f0c7a4da"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=feat%2Feip7906-state-diff-integration#b3a94d4f145169e5e623d386f9cb33f7b46fbc14"
 dependencies = [
  "alloy-eip2124",
  "alloy-eip2930",
@@ -164,7 +164,7 @@ dependencies = [
 [[package]]
 name = "alloy-evm"
 version = "0.39.0"
-source = "git+https://github.com/Soubhik-10/evm?branch=feat%2Feip8141#8086430bfd99792da38b9d633d2a72789ccab4bf"
+source = "git+https://github.com/Rimeeeeee/evm?branch=feat%2Feip7906-state-diff-integration#5d655ea59e50c65591012deaf3641992131eb7ff"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -245,7 +245,7 @@ dependencies = [
 [[package]]
 name = "alloy-serde"
 version = "2.4.1"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=feat%2Feip8141-transaction#f8bef1c5d7b9fabbb81de3d867ee98a4f0c7a4da"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=feat%2Feip7906-state-diff-integration#b3a94d4f145169e5e623d386f9cb33f7b46fbc14"
 dependencies = [
  "alloy-primitives",
  "serde",
@@ -329,7 +329,7 @@ dependencies = [
 [[package]]
 name = "alloy-tx-macros"
 version = "2.4.1"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=feat%2Feip8141-transaction#f8bef1c5d7b9fabbb81de3d867ee98a4f0c7a4da"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=feat%2Feip7906-state-diff-integration#b3a94d4f145169e5e623d386f9cb33f7b46fbc14"
 dependencies = [
  "darling 0.23.0",
  "proc-macro2",
@@ -1763,7 +1763,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
 dependencies = [
  "libc",
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -2205,7 +2205,7 @@ checksum = "3640c1c38b8e4e43584d8df18be5fc6b0aa314ce6ebf51b53313d4306cca8e46"
 dependencies = [
  "hermit-abi",
  "libc",
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -2544,7 +2544,7 @@ version = "0.50.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7957b9740744892f114936ab4a57b3f487491bbeafaf8083688b16841a4240e5"
 dependencies = [
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -3199,7 +3199,7 @@ checksum = "d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4"
 [[package]]
 name = "revm"
 version = "43.0.2"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#320159cd100aa23133d3c191446a83159fcf4eac"
+source = "git+https://github.com/Rimeeeeee/revm?branch=feat%2Feip7906-state-diff-finalize#34f46fb1e25d9200cfad51c50134e8dcf863c12b"
 dependencies = [
  "revm-bytecode",
  "revm-context",
@@ -3217,7 +3217,7 @@ dependencies = [
 [[package]]
 name = "revm-bytecode"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#320159cd100aa23133d3c191446a83159fcf4eac"
+source = "git+https://github.com/Rimeeeeee/revm?branch=feat%2Feip7906-state-diff-finalize#34f46fb1e25d9200cfad51c50134e8dcf863c12b"
 dependencies = [
  "bitvec",
  "paste",
@@ -3229,7 +3229,7 @@ dependencies = [
 [[package]]
 name = "revm-context"
 version = "43.0.2"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#320159cd100aa23133d3c191446a83159fcf4eac"
+source = "git+https://github.com/Rimeeeeee/revm?branch=feat%2Feip7906-state-diff-finalize#34f46fb1e25d9200cfad51c50134e8dcf863c12b"
 dependencies = [
  "alloy-eip8141",
  "bitvec",
@@ -3246,7 +3246,7 @@ dependencies = [
 [[package]]
 name = "revm-context-interface"
 version = "43.0.1"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#320159cd100aa23133d3c191446a83159fcf4eac"
+source = "git+https://github.com/Rimeeeeee/revm?branch=feat%2Feip7906-state-diff-finalize#34f46fb1e25d9200cfad51c50134e8dcf863c12b"
 dependencies = [
  "alloy-eip2930",
  "alloy-eip7702",
@@ -3262,7 +3262,7 @@ dependencies = [
 [[package]]
 name = "revm-database"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#320159cd100aa23133d3c191446a83159fcf4eac"
+source = "git+https://github.com/Rimeeeeee/revm?branch=feat%2Feip7906-state-diff-finalize#34f46fb1e25d9200cfad51c50134e8dcf863c12b"
 dependencies = [
  "alloy-eips",
  "derive_more",
@@ -3277,7 +3277,7 @@ dependencies = [
 [[package]]
 name = "revm-database-interface"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#320159cd100aa23133d3c191446a83159fcf4eac"
+source = "git+https://github.com/Rimeeeeee/revm?branch=feat%2Feip7906-state-diff-finalize#34f46fb1e25d9200cfad51c50134e8dcf863c12b"
 dependencies = [
  "auto_impl",
  "either",
@@ -3290,7 +3290,7 @@ dependencies = [
 [[package]]
 name = "revm-handler"
 version = "43.0.2"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#320159cd100aa23133d3c191446a83159fcf4eac"
+source = "git+https://github.com/Rimeeeeee/revm?branch=feat%2Feip7906-state-diff-finalize#34f46fb1e25d9200cfad51c50134e8dcf863c12b"
 dependencies = [
  "alloy-eip8141",
  "auto_impl",
@@ -3309,7 +3309,7 @@ dependencies = [
 [[package]]
 name = "revm-inspector"
 version = "43.0.2"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#320159cd100aa23133d3c191446a83159fcf4eac"
+source = "git+https://github.com/Rimeeeeee/revm?branch=feat%2Feip7906-state-diff-finalize#34f46fb1e25d9200cfad51c50134e8dcf863c12b"
 dependencies = [
  "auto_impl",
  "either",
@@ -3326,7 +3326,7 @@ dependencies = [
 [[package]]
 name = "revm-interpreter"
 version = "43.0.1"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#320159cd100aa23133d3c191446a83159fcf4eac"
+source = "git+https://github.com/Rimeeeeee/revm?branch=feat%2Feip7906-state-diff-finalize#34f46fb1e25d9200cfad51c50134e8dcf863c12b"
 dependencies = [
  "revm-bytecode",
  "revm-context-interface",
@@ -3338,7 +3338,7 @@ dependencies = [
 [[package]]
 name = "revm-precompile"
 version = "43.0.2"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#320159cd100aa23133d3c191446a83159fcf4eac"
+source = "git+https://github.com/Rimeeeeee/revm?branch=feat%2Feip7906-state-diff-finalize#34f46fb1e25d9200cfad51c50134e8dcf863c12b"
 dependencies = [
  "ark-bls12-381",
  "ark-bn254",
@@ -3361,7 +3361,7 @@ dependencies = [
 [[package]]
 name = "revm-primitives"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#320159cd100aa23133d3c191446a83159fcf4eac"
+source = "git+https://github.com/Rimeeeeee/revm?branch=feat%2Feip7906-state-diff-finalize#34f46fb1e25d9200cfad51c50134e8dcf863c12b"
 dependencies = [
  "alloy-primitives",
  "once_cell",
@@ -3371,7 +3371,7 @@ dependencies = [
 [[package]]
 name = "revm-state"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#320159cd100aa23133d3c191446a83159fcf4eac"
+source = "git+https://github.com/Rimeeeeee/revm?branch=feat%2Feip7906-state-diff-finalize#34f46fb1e25d9200cfad51c50134e8dcf863c12b"
 dependencies = [
  "alloy-eip7928",
  "bitflags 2.13.2",
@@ -3384,7 +3384,7 @@ dependencies = [
 [[package]]
 name = "revm-statetest-types"
 version = "43.0.1"
-source = "git+https://github.com/Soubhik-10/revm?branch=feat%2Feip8141-frame-transactions#320159cd100aa23133d3c191446a83159fcf4eac"
+source = "git+https://github.com/Rimeeeeee/revm?branch=feat%2Feip7906-state-diff-finalize#34f46fb1e25d9200cfad51c50134e8dcf863c12b"
 dependencies = [
  "alloy-eip7928",
  "k256",
@@ -3767,7 +3767,7 @@ dependencies = [
  "errno",
  "libc",
  "linux-raw-sys",
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -4182,7 +4182,7 @@ dependencies = [
  "getrandom 0.4.3",
  "once_cell",
  "rustix",
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -4646,7 +4646,7 @@ version = "0.1.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c2a7b1c03c876122aa43f3020e6c3c3ee5c05081c9a00739faf7503aeba10d22"
 dependencies = [
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
