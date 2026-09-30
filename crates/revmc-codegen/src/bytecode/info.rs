@@ -76,7 +76,7 @@ impl OpcodeInfo {
 
 /// Returns the static info map for the given `SpecId`.
 pub const fn op_info_map(spec_id: SpecId) -> &'static [OpcodeInfo; 256] {
-    const SPEC_COUNT: usize = SpecId::AMSTERDAM as usize + 1;
+    const SPEC_COUNT: usize = SpecId::BOGOTA as usize + 1;
     static MAPS: [[OpcodeInfo; 256]; SPEC_COUNT] = {
         let mut maps = [[OpcodeInfo(OpcodeInfo::UNKNOWN); 256]; SPEC_COUNT];
         let mut i = 0;
@@ -116,6 +116,8 @@ const DYNAMIC_WITH_BASE_GAS: &[u8] = &[
     op::DELEGATECALL,
     op::STATICCALL,
     op::SELFDESTRUCT,
+    op::TXDIFF,
+    op::EVENTDATACOPY,
 ];
 
 /// Opcodes whose gas cost is entirely dynamic — computed fully in builtins at runtime.
@@ -147,6 +149,16 @@ const SPEC_GATED_OPCODES: &[(u8, SpecId)] = &[
     (op::SWAPN, SpecId::AMSTERDAM),
     (op::EXCHANGE, SpecId::AMSTERDAM),
     (op::SLOTNUM, SpecId::AMSTERDAM),
+    (op::APPROVE, SpecId::BOGOTA),
+    (op::TXPARAM, SpecId::BOGOTA),
+    (op::FRAMEDATALOAD, SpecId::BOGOTA),
+    (op::FRAMEDATACOPY, SpecId::BOGOTA),
+    (op::FRAMEPARAM, SpecId::BOGOTA),
+    (op::SIGPARAM, SpecId::BOGOTA),
+    (op::SIGDATACOPY, SpecId::BOGOTA),
+    (op::TXTRACE, SpecId::BOGOTA),
+    (op::TXDIFF, SpecId::BOGOTA),
+    (op::EVENTDATACOPY, SpecId::BOGOTA),
 ];
 
 /// Opcodes present in the upstream instruction table but not supported by revmc (e.g. EOF-only).
@@ -226,6 +238,29 @@ const fn make_map(spec_id: SpecId) -> [OpcodeInfo; 256] {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn frame_opcodes_are_fork_gated_and_bogota_map_is_in_bounds() {
+        let before = op_info_map(SpecId::AMSTERDAM);
+        let active = op_info_map(SpecId::BOGOTA);
+        for opcode in [
+            op::APPROVE,
+            op::TXPARAM,
+            op::FRAMEDATALOAD,
+            op::FRAMEDATACOPY,
+            op::FRAMEPARAM,
+            op::SIGPARAM,
+            op::SIGDATACOPY,
+            op::TXTRACE,
+            op::TXDIFF,
+            op::EVENTDATACOPY,
+        ] {
+            assert!(before[opcode as usize].is_disabled());
+            assert!(!active[opcode as usize].is_disabled());
+        }
+        assert!(active[op::TXDIFF as usize].is_dynamic());
+        assert!(active[op::EVENTDATACOPY as usize].is_dynamic());
+    }
 
     #[test]
     fn test_clz_flags() {

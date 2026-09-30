@@ -334,6 +334,15 @@ pub struct RuntimeTuning {
 }
 
 impl RuntimeTuning {
+    /// Whether compiled execution supports this fork's host and gas semantics.
+    ///
+    /// Bogota requires frame-aware execution, including EIP-7906, which the
+    /// compiler does not implement yet. Do not load or generate artifacts for it.
+    #[inline]
+    pub const fn supports_spec(spec_id: SpecId) -> bool {
+        (spec_id as u8) <= (SpecId::AMSTERDAM as u8)
+    }
+
     /// Returns whether `bytecode` is eligible for JIT/AOT compilation.
     #[inline]
     pub fn should_compile(&self, bytecode: &[u8]) -> bool {

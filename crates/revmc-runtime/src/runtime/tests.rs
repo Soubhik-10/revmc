@@ -12,6 +12,32 @@ use std::sync::{Arc, Mutex};
 /// PUSH1 0x42 PUSH0 MSTORE PUSH1 0x20 PUSH0 RETURN — returns 0x42.
 const BYTECODE_RET42: &[u8] = &[0x60, 0x42, 0x5f, 0x52, 0x60, 0x20, 0x5f, 0xf3];
 
+#[test]
+fn bogota_uses_interpreter_for_async_blocking_and_explicit_compilation() {
+    for blocking in [false, true] {
+        let tb = TestBackend::new(RuntimeConfig { enabled: true, blocking, ..Default::default() });
+        for code in [BYTECODE_RET42, &[0xb7][..], &[0xb8][..], &[0xb9][..]] {
+            let req = TestBackend::req(code, SpecId::BOGOTA);
+            assert!(matches!(
+                tb.lookup(req.clone()),
+                LookupDecision::Interpret(InterpretReason::Ineligible)
+            ));
+            assert!(matches!(
+                tb.lookup_blocking(req.clone()),
+                LookupDecision::Interpret(InterpretReason::Ineligible)
+            ));
+            assert!(tb.compile_jit_sync(req.clone()).is_err());
+            tb.compile_jit(req.clone());
+            tb.prepare_aot(AotRequest {
+                code_hash: req.key.code_hash,
+                spec_id: req.key.spec_id,
+                code: req.code,
+            });
+            assert!(tb.get_compiled(req.key.code_hash, req.key.spec_id).is_none());
+        }
+    }
+}
+
 /// PUSH1 1 PUSH1 1 ADD PUSH0 MSTORE PUSH1 0x20 PUSH0 RETURN — returns 2.
 const BYTECODE_ADD: &[u8] = &[0x60, 0x01, 0x60, 0x01, 0x01, 0x5f, 0x52, 0x60, 0x20, 0x5f, 0xf3];
 

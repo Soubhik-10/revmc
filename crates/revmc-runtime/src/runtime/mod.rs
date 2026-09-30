@@ -217,7 +217,8 @@ impl JitBackend {
             cold_path();
             return self.lookup_blocking(req);
         }
-        if !inner.tuning.should_compile(&req.code) {
+        if !RuntimeTuning::supports_spec(req.key.spec_id) || !inner.tuning.should_compile(&req.code)
+        {
             cold_path();
             return LookupDecision::Interpret(InterpretReason::Ineligible);
         }
@@ -241,6 +242,9 @@ impl JitBackend {
 
     /// Checks the resident map for a compiled program without enqueuing an event.
     pub fn get_compiled(&self, code_hash: B256, spec_id: SpecId) -> Option<Arc<CompiledProgram>> {
+        if !RuntimeTuning::supports_spec(spec_id) {
+            return None;
+        }
         let key = RuntimeCacheKey { code_hash, spec_id };
         self.inner.shared.resident.get(&key).map(|entry| Arc::clone(&entry))
     }
@@ -267,7 +271,9 @@ impl JitBackend {
     /// Returns [`LookupDecision::Interpret`] if the bytecode is ineligible for
     /// compilation (see [`RuntimeTuning::should_compile`]) or compilation fails.
     pub fn lookup_blocking(&self, req: LookupRequest) -> LookupDecision {
-        if !self.inner.tuning.should_compile(&req.code) {
+        if !RuntimeTuning::supports_spec(req.key.spec_id)
+            || !self.inner.tuning.should_compile(&req.code)
+        {
             return LookupDecision::Interpret(InterpretReason::Ineligible);
         }
         let code_hash = req.key.code_hash;
@@ -288,6 +294,9 @@ impl JitBackend {
     ///
     /// Blocks if the command channel is full to guarantee delivery.
     pub fn compile_jit(&self, req: LookupRequest) {
+        if !RuntimeTuning::supports_spec(req.key.spec_id) {
+            return;
+        }
         let _ = self.ensure_started();
         let cmd = Command::CompileJit(CompileJitRequest {
             key: req.key,
@@ -303,6 +312,10 @@ impl JitBackend {
     /// or when the compilation fails. Use [`get_compiled`](Self::get_compiled) to
     /// retrieve the result after this returns.
     pub fn compile_jit_sync(&self, req: LookupRequest) -> eyre::Result<()> {
+        eyre::ensure!(
+            RuntimeTuning::supports_spec(req.key.spec_id),
+            "Bogota frame execution is interpreter-only"
+        );
         self.ensure_started()?;
         let (tx, rx) = chan::bounded(1);
         let cmd = Command::CompileJit(CompileJitRequest {
@@ -327,14 +340,18 @@ impl JitBackend {
     ///
     /// Blocks if the command channel is full to guarantee delivery.
     pub fn prepare_aot_batch(&self, reqs: Vec<AotRequest>) {
-        let _ = self.ensure_started();
         let owned: Vec<PrepareAotRequest> = reqs
             .into_iter()
+            .filter(|r| RuntimeTuning::supports_spec(r.spec_id))
             .map(|r| PrepareAotRequest {
                 key: RuntimeCacheKey { code_hash: r.code_hash, spec_id: r.spec_id },
                 bytecode: r.code,
             })
             .collect();
+        if owned.is_empty() {
+            return;
+        }
+        let _ = self.ensure_started();
         let cmd = Command::PrepareAot(owned);
         let _ = self.inner.tx.send(cmd);
     }
