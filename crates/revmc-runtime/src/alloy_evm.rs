@@ -139,6 +139,26 @@ where
         }
     }
 
+    fn validate_frame_transaction(
+        &mut self,
+        tx: Self::Tx,
+        prefix_end: usize,
+    ) -> Option<Result<revm_handler::eip8141::FrameValidationResult, Self::Error>> {
+        // Prefix validation is bounded interpreter work. Preserve inspector hooks and configured
+        // precompiles without scheduling compilation of untrusted validation-only bytecode.
+        let inner = self.inner.inner_mut();
+        inner.ctx.set_tx(tx);
+        Some(if self.inspect {
+            MainnetHandler::default().inspect_validate_prefix(inner, prefix_end)
+        } else {
+            revm_handler::eip8141::validate_prefix(
+                &mut MainnetHandler::default(),
+                inner,
+                prefix_end,
+            )
+        })
+    }
+
     fn finish(self) -> (Self::DB, EvmEnv<Self::Spec>) {
         let revm_context::Context { block: block_env, cfg: cfg_env, journaled_state, .. } =
             self.inner.into_inner().ctx;
