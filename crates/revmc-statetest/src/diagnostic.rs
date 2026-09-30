@@ -59,6 +59,13 @@ fn snapshot_from_result(
                 }
                 ExecutionResult::Revert { .. } => ExecStatus::Revert,
                 ExecutionResult::Halt { reason, .. } => ExecStatus::Halt(format!("{reason:?}")),
+                ExecutionResult::FrameTransaction { success, .. } => {
+                    if *success {
+                        ExecStatus::Success("FrameTransaction".to_string())
+                    } else {
+                        ExecStatus::Revert
+                    }
+                }
             };
             (status, result.output().cloned(), result.tx_gas_used())
         }
