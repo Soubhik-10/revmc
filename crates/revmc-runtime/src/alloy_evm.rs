@@ -109,23 +109,6 @@ where
         if self.inspect { self.inner.inspect_tx(tx) } else { self.inner.transact(tx) }
     }
 
-    fn validate_frame_transaction(
-        &mut self,
-        tx: Self::Tx,
-        prefix_end: usize,
-    ) -> Option<Result<revm_handler::eip8141::FrameValidationResult, Self::Error>> {
-        self.inner.ctx.set_tx(tx);
-        if self.inspect {
-            Some(MainnetHandler::default().inspect_validate_prefix(&mut self.inner, prefix_end))
-        } else {
-            Some(revm_handler::eip8141::validate_prefix(
-                &mut MainnetHandler::default(),
-                &mut self.inner,
-                prefix_end,
-            ))
-        }
-    }
-
     fn transact_system_call(
         &mut self,
         caller: Address,
