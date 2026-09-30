@@ -299,6 +299,10 @@ impl BackendState {
         sync_notifier: SyncNotifier,
         mode: AdmitMode,
     ) {
+        if !RuntimeTuning::supports_spec(key.spec_id) {
+            sync_notifier.notify();
+            return;
+        }
         if self.inner.resident.contains_key(&key) {
             sync_notifier.notify();
             return;

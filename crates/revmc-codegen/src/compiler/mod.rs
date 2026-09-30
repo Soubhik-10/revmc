@@ -566,6 +566,10 @@ impl<B: Backend> EvmCompiler<B> {
         input: EvmCompilerInput<'a>,
         spec_id: SpecId,
     ) -> Result<Bytecode<'a>> {
+        ensure!(
+            spec_id <= SpecId::AMSTERDAM,
+            "Bogota frame execution is interpreter-only until compiled frame support is implemented"
+        );
         let _t = self.remarks.time(|r| &r.parse);
         let EvmCompilerInput::Code(bytecode) = input;
 
@@ -584,6 +588,10 @@ impl<B: Backend> EvmCompiler<B> {
     #[instrument(name = "translate", level = "debug", skip_all)]
     #[doc(hidden)] // Not public API.
     pub fn translate_inner(&mut self, name: &str, bytecode: &Bytecode<'_>) -> Result<B::FuncId> {
+        ensure!(
+            bytecode.spec_id <= SpecId::AMSTERDAM,
+            "Bogota frame execution is interpreter-only until compiled frame support is implemented"
+        );
         ensure!(cfg!(target_endian = "little"), "only little-endian is supported");
         let _t = self.remarks.time(|r| &r.translate);
         ensure!(self.backend.function_name_is_unique(name), "function name `{name}` is not unique");
