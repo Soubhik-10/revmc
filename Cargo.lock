@@ -58,7 +58,7 @@ dependencies = [
 [[package]]
 name = "alloy-consensus"
 version = "2.5.0"
-source = "git+https://github.com/Rimeeeeee/alloy?rev=7f8984c56402a2b5da5340d33a5fcefcef2bc578#7f8984c56402a2b5da5340d33a5fcefcef2bc578"
+source = "git+https://github.com/Rimeeeeee/alloy?rev=4f840608305d88164248ac2a7e0caf05c2e0ea0c#4f840608305d88164248ac2a7e0caf05c2e0ea0c"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -141,7 +141,7 @@ dependencies = [
 [[package]]
 name = "alloy-eips"
 version = "2.5.0"
-source = "git+https://github.com/Rimeeeeee/alloy?rev=7f8984c56402a2b5da5340d33a5fcefcef2bc578#7f8984c56402a2b5da5340d33a5fcefcef2bc578"
+source = "git+https://github.com/Rimeeeeee/alloy?rev=4f840608305d88164248ac2a7e0caf05c2e0ea0c#4f840608305d88164248ac2a7e0caf05c2e0ea0c"
 dependencies = [
  "alloy-eip2124",
  "alloy-eip2930",
@@ -165,7 +165,7 @@ dependencies = [
 [[package]]
 name = "alloy-evm"
 version = "0.39.0"
-source = "git+https://github.com/Rimeeeeee/evm?rev=cfb11e2e92b547fa2d2d9083bd0d5558ca8a4091#cfb11e2e92b547fa2d2d9083bd0d5558ca8a4091"
+source = "git+https://github.com/Rimeeeeee/evm?rev=388722923ec1e5f822b9497332c271532b8c2df9#388722923ec1e5f822b9497332c271532b8c2df9"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -257,7 +257,7 @@ dependencies = [
 [[package]]
 name = "alloy-serde"
 version = "2.5.0"
-source = "git+https://github.com/Rimeeeeee/alloy?rev=7f8984c56402a2b5da5340d33a5fcefcef2bc578#7f8984c56402a2b5da5340d33a5fcefcef2bc578"
+source = "git+https://github.com/Rimeeeeee/alloy?rev=4f840608305d88164248ac2a7e0caf05c2e0ea0c#4f840608305d88164248ac2a7e0caf05c2e0ea0c"
 dependencies = [
  "alloy-primitives",
  "serde",
@@ -353,7 +353,7 @@ dependencies = [
 [[package]]
 name = "alloy-tx-macros"
 version = "2.5.0"
-source = "git+https://github.com/Rimeeeeee/alloy?rev=7f8984c56402a2b5da5340d33a5fcefcef2bc578#7f8984c56402a2b5da5340d33a5fcefcef2bc578"
+source = "git+https://github.com/Rimeeeeee/alloy?rev=4f840608305d88164248ac2a7e0caf05c2e0ea0c#4f840608305d88164248ac2a7e0caf05c2e0ea0c"
 dependencies = [
  "darling",
  "proc-macro2",
@@ -3115,7 +3115,7 @@ checksum = "d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4"
 [[package]]
 name = "revm"
 version = "43.0.3"
-source = "git+https://github.com/Rimeeeeee/revm?rev=6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4#6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4"
+source = "git+https://github.com/Rimeeeeee/revm?rev=693f8320e82cd8d013b9f9d4af70cacdfae6eff2#693f8320e82cd8d013b9f9d4af70cacdfae6eff2"
 dependencies = [
  "revm-bytecode",
  "revm-context",
@@ -3133,7 +3133,7 @@ dependencies = [
 [[package]]
 name = "revm-bytecode"
 version = "43.0.0"
-source = "git+https://github.com/Rimeeeeee/revm?rev=6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4#6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4"
+source = "git+https://github.com/Rimeeeeee/revm?rev=693f8320e82cd8d013b9f9d4af70cacdfae6eff2#693f8320e82cd8d013b9f9d4af70cacdfae6eff2"
 dependencies = [
  "bitvec",
  "paste",
@@ -3145,7 +3145,7 @@ dependencies = [
 [[package]]
 name = "revm-context"
 version = "43.0.3"
-source = "git+https://github.com/Rimeeeeee/revm?rev=6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4#6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4"
+source = "git+https://github.com/Rimeeeeee/revm?rev=693f8320e82cd8d013b9f9d4af70cacdfae6eff2#693f8320e82cd8d013b9f9d4af70cacdfae6eff2"
 dependencies = [
  "alloy-eip8141",
  "bitvec",
@@ -3162,7 +3162,7 @@ dependencies = [
 [[package]]
 name = "revm-context-interface"
 version = "43.0.2"
-source = "git+https://github.com/Rimeeeeee/revm?rev=6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4#6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4"
+source = "git+https://github.com/Rimeeeeee/revm?rev=693f8320e82cd8d013b9f9d4af70cacdfae6eff2#693f8320e82cd8d013b9f9d4af70cacdfae6eff2"
 dependencies = [
  "alloy-eip2930",
  "alloy-eip7702",
@@ -3178,7 +3178,7 @@ dependencies = [
 [[package]]
 name = "revm-database"
 version = "43.0.1"
-source = "git+https://github.com/Rimeeeeee/revm?rev=6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4#6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4"
+source = "git+https://github.com/Rimeeeeee/revm?rev=693f8320e82cd8d013b9f9d4af70cacdfae6eff2#693f8320e82cd8d013b9f9d4af70cacdfae6eff2"
 dependencies = [
  "alloy-eips",
  "derive_more",
@@ -3193,7 +3193,7 @@ dependencies = [
 [[package]]
 name = "revm-database-interface"
 version = "43.0.1"
-source = "git+https://github.com/Rimeeeeee/revm?rev=6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4#6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4"
+source = "git+https://github.com/Rimeeeeee/revm?rev=693f8320e82cd8d013b9f9d4af70cacdfae6eff2#693f8320e82cd8d013b9f9d4af70cacdfae6eff2"
 dependencies = [
  "auto_impl",
  "either",
@@ -3206,7 +3206,7 @@ dependencies = [
 [[package]]
 name = "revm-handler"
 version = "43.0.3"
-source = "git+https://github.com/Rimeeeeee/revm?rev=6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4#6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4"
+source = "git+https://github.com/Rimeeeeee/revm?rev=693f8320e82cd8d013b9f9d4af70cacdfae6eff2#693f8320e82cd8d013b9f9d4af70cacdfae6eff2"
 dependencies = [
  "alloy-eip8141",
  "auto_impl",
@@ -3225,7 +3225,7 @@ dependencies = [
 [[package]]
 name = "revm-inspector"
 version = "43.0.3"
-source = "git+https://github.com/Rimeeeeee/revm?rev=6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4#6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4"
+source = "git+https://github.com/Rimeeeeee/revm?rev=693f8320e82cd8d013b9f9d4af70cacdfae6eff2#693f8320e82cd8d013b9f9d4af70cacdfae6eff2"
 dependencies = [
  "auto_impl",
  "either",
@@ -3242,7 +3242,7 @@ dependencies = [
 [[package]]
 name = "revm-interpreter"
 version = "43.0.2"
-source = "git+https://github.com/Rimeeeeee/revm?rev=6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4#6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4"
+source = "git+https://github.com/Rimeeeeee/revm?rev=693f8320e82cd8d013b9f9d4af70cacdfae6eff2#693f8320e82cd8d013b9f9d4af70cacdfae6eff2"
 dependencies = [
  "revm-bytecode",
  "revm-context-interface",
@@ -3254,7 +3254,7 @@ dependencies = [
 [[package]]
 name = "revm-precompile"
 version = "43.0.3"
-source = "git+https://github.com/Rimeeeeee/revm?rev=6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4#6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4"
+source = "git+https://github.com/Rimeeeeee/revm?rev=693f8320e82cd8d013b9f9d4af70cacdfae6eff2#693f8320e82cd8d013b9f9d4af70cacdfae6eff2"
 dependencies = [
  "ark-bls12-381",
  "ark-bn254",
@@ -3277,7 +3277,7 @@ dependencies = [
 [[package]]
 name = "revm-primitives"
 version = "43.0.0"
-source = "git+https://github.com/Rimeeeeee/revm?rev=6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4#6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4"
+source = "git+https://github.com/Rimeeeeee/revm?rev=693f8320e82cd8d013b9f9d4af70cacdfae6eff2#693f8320e82cd8d013b9f9d4af70cacdfae6eff2"
 dependencies = [
  "alloy-primitives",
  "once_cell",
@@ -3287,7 +3287,7 @@ dependencies = [
 [[package]]
 name = "revm-state"
 version = "43.0.1"
-source = "git+https://github.com/Rimeeeeee/revm?rev=6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4#6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4"
+source = "git+https://github.com/Rimeeeeee/revm?rev=693f8320e82cd8d013b9f9d4af70cacdfae6eff2#693f8320e82cd8d013b9f9d4af70cacdfae6eff2"
 dependencies = [
  "alloy-eip7928",
  "bitflags",
@@ -3301,7 +3301,7 @@ dependencies = [
 [[package]]
 name = "revm-statetest-types"
 version = "43.0.2"
-source = "git+https://github.com/Rimeeeeee/revm?rev=6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4#6bc175f3f8032b13a8bb1e7e1219e8f9fe45ffa4"
+source = "git+https://github.com/Rimeeeeee/revm?rev=693f8320e82cd8d013b9f9d4af70cacdfae6eff2#693f8320e82cd8d013b9f9d4af70cacdfae6eff2"
 dependencies = [
  "alloy-eip7928",
  "k256",
