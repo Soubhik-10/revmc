@@ -286,6 +286,10 @@ impl Host for TestHost {
         &self.gas_params
     }
 
+    fn is_amsterdam_eip8024_enabled(&self) -> bool {
+        false
+    }
+
     fn is_amsterdam_eip8037_enabled(&self) -> bool {
         false
     }
