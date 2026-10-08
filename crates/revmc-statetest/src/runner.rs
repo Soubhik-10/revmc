@@ -152,6 +152,7 @@ fn format_evm_result(
     match exec_result {
         Ok(r) => match r {
             ExecutionResult::Success { reason, .. } => format!("Success: {reason:?}"),
+            ExecutionResult::FrameTransaction { .. } => "FrameTransaction".to_string(),
             ExecutionResult::Revert { .. } => "Revert".to_string(),
             ExecutionResult::Halt { reason, .. } => format!("Halt: {reason:?}"),
         },

@@ -57,6 +57,9 @@ fn snapshot_from_result(
                 ExecutionResult::Success { reason, .. } => {
                     ExecStatus::Success(format!("{reason:?}"))
                 }
+                ExecutionResult::FrameTransaction { .. } => {
+                    ExecStatus::Success("FrameTransaction".into())
+                }
                 ExecutionResult::Revert { .. } => ExecStatus::Revert,
                 ExecutionResult::Halt { reason, .. } => ExecStatus::Halt(format!("{reason:?}")),
             };
