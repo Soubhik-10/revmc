@@ -244,6 +244,7 @@ pub struct TestHost {
     pub selfdestructs: Vec<(Address, Address)>,
     pub logs: Vec<Log>,
     pub gas_params: GasParams,
+    pub eip8024_enabled: bool,
 }
 
 impl Default for TestHost {
@@ -265,6 +266,7 @@ impl TestHost {
             selfdestructs: Vec::new(),
             logs: Vec::new(),
             gas_params: GasParams::new_spec(spec_id),
+            eip8024_enabled: spec_id.is_enabled_in(SpecId::AMSTERDAM),
         }
     }
 }
@@ -287,7 +289,7 @@ impl Host for TestHost {
     }
 
     fn is_amsterdam_eip8024_enabled(&self) -> bool {
-        false
+        self.eip8024_enabled
     }
 
     fn is_amsterdam_eip8037_enabled(&self) -> bool {
