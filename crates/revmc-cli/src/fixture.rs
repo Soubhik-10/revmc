@@ -281,6 +281,7 @@ impl PreparedBench {
         cfg.tx_gas_limit_cap = Some(block.gas_limit);
         cfg.disable_nonce_check = true;
         let tx = TxEnv {
+            frame_transaction: None,
             tx_type: 0,
             caller,
             gas_limit: parse_u64(&first_tx.gas_limit),
