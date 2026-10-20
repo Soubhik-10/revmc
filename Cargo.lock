@@ -58,7 +58,7 @@ dependencies = [
 [[package]]
 name = "alloy-consensus"
 version = "2.5.0"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#3d48a41b651afa51a163f35b577d9f645598763b"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#39c90f946d83551d41b7704c1ac40dd73fd672c7"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -141,7 +141,7 @@ dependencies = [
 [[package]]
 name = "alloy-eips"
 version = "2.5.0"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#3d48a41b651afa51a163f35b577d9f645598763b"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#39c90f946d83551d41b7704c1ac40dd73fd672c7"
 dependencies = [
  "alloy-eip2124",
  "alloy-eip2930",
@@ -258,7 +258,7 @@ dependencies = [
 [[package]]
 name = "alloy-serde"
 version = "2.5.0"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#3d48a41b651afa51a163f35b577d9f645598763b"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#39c90f946d83551d41b7704c1ac40dd73fd672c7"
 dependencies = [
  "alloy-primitives",
  "serde",
@@ -354,7 +354,7 @@ dependencies = [
 [[package]]
 name = "alloy-tx-macros"
 version = "2.5.0"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#3d48a41b651afa51a163f35b577d9f645598763b"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#39c90f946d83551d41b7704c1ac40dd73fd672c7"
 dependencies = [
  "darling 0.23.0",
  "proc-macro2",
