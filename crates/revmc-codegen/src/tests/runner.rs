@@ -238,6 +238,7 @@ pub fn def_codemap() -> &'static HashMap<Address, revm_bytecode::Bytecode> {
 
 /// Test host that implements [`Host`] trait for testing.
 pub struct TestHost {
+    spec_id: SpecId,
     pub storage: HashMap<U256, U256>,
     pub transient_storage: HashMap<U256, U256>,
     pub code_map: &'static HashMap<Address, revm_bytecode::Bytecode>,
@@ -259,6 +260,7 @@ impl TestHost {
 
     pub fn with_spec(spec_id: SpecId) -> Self {
         Self {
+            spec_id,
             storage: def_storage().clone(),
             transient_storage: HashMap::default(),
             code_map: def_codemap(),
@@ -284,6 +286,10 @@ impl Host for TestHost {
 
     fn gas_params(&self) -> &GasParams {
         &self.gas_params
+    }
+
+    fn is_amsterdam_eip8024_enabled(&self) -> bool {
+        self.spec_id.is_enabled_in(SpecId::AMSTERDAM)
     }
 
     fn is_amsterdam_eip8037_enabled(&self) -> bool {
@@ -398,7 +404,7 @@ impl Host for TestHost {
         };
 
         // Create owned account info
-        let info = AccountInfo { balance, nonce: 0, code_hash, account_id: None, code };
+        let info = AccountInfo { balance, nonce: 0, code_hash, code, ..Default::default() };
 
         let is_empty = info.code.is_none() && info.balance.is_zero() && info.nonce == 0;
 
@@ -782,5 +788,17 @@ pub fn insert_call_outcome_test(
 
     if ins_result.is_ok() {
         interpreter.gas.record_refund(out_gas.refunded());
+    }
+}
+
+#[test]
+fn test_host_eip8024_activation_matches_spec() {
+    for (spec, enabled) in [
+        (SpecId::CANCUN, false),
+        (SpecId::OSAKA, false),
+        (SpecId::AMSTERDAM, true),
+        (SpecId::BOGOTA, true),
+    ] {
+        assert_eq!(TestHost::with_spec(spec).is_amsterdam_eip8024_enabled(), enabled);
     }
 }

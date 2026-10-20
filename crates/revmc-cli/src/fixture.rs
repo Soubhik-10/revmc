@@ -300,6 +300,7 @@ impl PreparedBench {
             blob_hashes: Vec::new(),
             max_fee_per_blob_gas: 0,
             authorization_list: Vec::new(),
+            frame_transaction: None,
         };
 
         (accounts, block, cfg, tx)
@@ -326,7 +327,7 @@ impl PreparedBench {
                     nonce: acct.nonce,
                     code_hash: acct.code_hash,
                     code: Some(acct.bytecode.clone()),
-                    account_id: None,
+                    ..Default::default()
                 },
             );
             if !acct.storage.is_empty() {

@@ -57,8 +57,8 @@ dependencies = [
 
 [[package]]
 name = "alloy-consensus"
-version = "2.4.1"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#12fdaee23d0b644c476bf5e56e5c1632927b2e6b"
+version = "2.5.0"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#3d48a41b651afa51a163f35b577d9f645598763b"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -140,8 +140,8 @@ dependencies = [
 
 [[package]]
 name = "alloy-eips"
-version = "2.4.1"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#12fdaee23d0b644c476bf5e56e5c1632927b2e6b"
+version = "2.5.0"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#3d48a41b651afa51a163f35b577d9f645598763b"
 dependencies = [
  "alloy-eip2124",
  "alloy-eip2930",
@@ -151,6 +151,7 @@ dependencies = [
  "alloy-primitives",
  "alloy-rlp",
  "alloy-serde",
+ "alloy-sol-types",
  "auto_impl",
  "borsh",
  "c-kzg",
@@ -164,7 +165,7 @@ dependencies = [
 [[package]]
 name = "alloy-evm"
 version = "0.39.0"
-source = "git+https://github.com/Soubhik-10/evm?branch=frames-all-eips#5c35db18a87dd6122b7d1c0ab690d275fe13fa3a"
+source = "git+https://github.com/Soubhik-10/evm?branch=frames-all-eips#a751dbabc9aa1c1e37741ab1b8a94eec76fafcf1"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -189,6 +190,18 @@ dependencies = [
  "alloy-primitives",
  "auto_impl",
  "dyn-clone",
+]
+
+[[package]]
+name = "alloy-json-abi"
+version = "1.7.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "858acd7fdad1e4a7057fd9c1b39c1f2cd6bcd57ebf3c56e2853c02ead049e816"
+dependencies = [
+ "alloy-primitives",
+ "alloy-sol-type-parser",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
@@ -244,8 +257,8 @@ dependencies = [
 
 [[package]]
 name = "alloy-serde"
-version = "2.4.1"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#12fdaee23d0b644c476bf5e56e5c1632927b2e6b"
+version = "2.5.0"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#3d48a41b651afa51a163f35b577d9f645598763b"
 dependencies = [
  "alloy-primitives",
  "serde",
@@ -301,13 +314,25 @@ dependencies = [
 ]
 
 [[package]]
+name = "alloy-sol-type-parser"
+version = "1.7.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "77c2a8abc3334044013b23d5e438cc5dc802e5544cc42b713d0840d5185967cc"
+dependencies = [
+ "serde",
+ "winnow",
+]
+
+[[package]]
 name = "alloy-sol-types"
 version = "1.7.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3e6f87cf007caa54e95455875fbd25879b008d0d9c7c340a2c258b3a3400a28c"
 dependencies = [
+ "alloy-json-abi",
  "alloy-primitives",
  "alloy-sol-macro",
+ "serde",
 ]
 
 [[package]]
@@ -328,8 +353,8 @@ dependencies = [
 
 [[package]]
 name = "alloy-tx-macros"
-version = "2.4.1"
-source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#12fdaee23d0b644c476bf5e56e5c1632927b2e6b"
+version = "2.5.0"
+source = "git+https://github.com/Rimeeeeee/alloy?branch=frames-all-eips#3d48a41b651afa51a163f35b577d9f645598763b"
 dependencies = [
  "darling 0.23.0",
  "proc-macro2",
@@ -2973,17 +2998,17 @@ dependencies = [
 
 [[package]]
 name = "quanta"
-version = "0.12.6"
+version = "0.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f3ab5a9d756f0d97bdc89019bd2e4ea098cf9cde50ee7564dde6b81ccc8f06c7"
+checksum = "73be39b77b45d82a4d1a5793fe9a89a5c143ceaa6ad0d8417982566bb0f34e11"
 dependencies = [
- "crossbeam-utils",
  "libc",
- "once_cell",
+ "portable-atomic",
  "raw-cpuid",
- "wasi",
+ "wasip1",
+ "wasip2",
  "web-sys",
- "winapi",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -3198,8 +3223,8 @@ checksum = "d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4"
 
 [[package]]
 name = "revm"
-version = "43.0.2"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+version = "43.0.3"
+source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#4008b00393ffcadd3d77dca3b6e43ee2f9c69011"
 dependencies = [
  "revm-bytecode",
  "revm-context",
@@ -3217,7 +3242,7 @@ dependencies = [
 [[package]]
 name = "revm-bytecode"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#4008b00393ffcadd3d77dca3b6e43ee2f9c69011"
 dependencies = [
  "bitvec",
  "paste",
@@ -3228,8 +3253,8 @@ dependencies = [
 
 [[package]]
 name = "revm-context"
-version = "43.0.2"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+version = "43.0.3"
+source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#4008b00393ffcadd3d77dca3b6e43ee2f9c69011"
 dependencies = [
  "alloy-eip8141",
  "bitvec",
@@ -3245,8 +3270,8 @@ dependencies = [
 
 [[package]]
 name = "revm-context-interface"
-version = "43.0.1"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+version = "43.0.2"
+source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#4008b00393ffcadd3d77dca3b6e43ee2f9c69011"
 dependencies = [
  "alloy-eip2930",
  "alloy-eip7702",
@@ -3261,8 +3286,8 @@ dependencies = [
 
 [[package]]
 name = "revm-database"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+version = "43.0.1"
+source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#4008b00393ffcadd3d77dca3b6e43ee2f9c69011"
 dependencies = [
  "alloy-eips",
  "derive_more",
@@ -3276,8 +3301,8 @@ dependencies = [
 
 [[package]]
 name = "revm-database-interface"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+version = "43.0.1"
+source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#4008b00393ffcadd3d77dca3b6e43ee2f9c69011"
 dependencies = [
  "auto_impl",
  "either",
@@ -3289,8 +3314,8 @@ dependencies = [
 
 [[package]]
 name = "revm-handler"
-version = "43.0.2"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+version = "43.0.3"
+source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#4008b00393ffcadd3d77dca3b6e43ee2f9c69011"
 dependencies = [
  "alloy-eip8141",
  "auto_impl",
@@ -3308,8 +3333,8 @@ dependencies = [
 
 [[package]]
 name = "revm-inspector"
-version = "43.0.2"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+version = "43.0.3"
+source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#4008b00393ffcadd3d77dca3b6e43ee2f9c69011"
 dependencies = [
  "auto_impl",
  "either",
@@ -3325,8 +3350,8 @@ dependencies = [
 
 [[package]]
 name = "revm-interpreter"
-version = "43.0.1"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+version = "43.0.2"
+source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#4008b00393ffcadd3d77dca3b6e43ee2f9c69011"
 dependencies = [
  "revm-bytecode",
  "revm-context-interface",
@@ -3337,8 +3362,8 @@ dependencies = [
 
 [[package]]
 name = "revm-precompile"
-version = "43.0.2"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+version = "43.0.3"
+source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#4008b00393ffcadd3d77dca3b6e43ee2f9c69011"
 dependencies = [
  "ark-bls12-381",
  "ark-bn254",
@@ -3361,7 +3386,7 @@ dependencies = [
 [[package]]
 name = "revm-primitives"
 version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#4008b00393ffcadd3d77dca3b6e43ee2f9c69011"
 dependencies = [
  "alloy-primitives",
  "once_cell",
@@ -3370,8 +3395,8 @@ dependencies = [
 
 [[package]]
 name = "revm-state"
-version = "43.0.0"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+version = "43.0.1"
+source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#4008b00393ffcadd3d77dca3b6e43ee2f9c69011"
 dependencies = [
  "alloy-eip7928",
  "bitflags 2.13.2",
@@ -3379,12 +3404,13 @@ dependencies = [
  "revm-bytecode",
  "revm-primitives",
  "serde",
+ "triomphe",
 ]
 
 [[package]]
 name = "revm-statetest-types"
-version = "43.0.1"
-source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#17d7df74102534e73c95d9829ea18373ee4dbe51"
+version = "43.0.2"
+source = "git+https://github.com/Soubhik-10/revm?branch=frames-all-eips#4008b00393ffcadd3d77dca3b6e43ee2f9c69011"
 dependencies = [
  "alloy-eip7928",
  "k256",
@@ -4448,6 +4474,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "triomphe"
+version = "0.1.17"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0d15f4f5898bcfc5d8a8e45ed30b2f108d710c1a2e5489dbf80e078f707181bc"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "typenum"
 version = "1.20.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4549,6 +4584,12 @@ name = "wasi"
 version = "0.11.1+wasi-snapshot-preview1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ccf3ec651a847eb01de73ccad15eb7d99f80485de043efb2f370cd654f4ea44b"
+
+[[package]]
+name = "wasip1"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b5e26842486624357dbeb8f0381cf1fb42f022291fd787d4a816768fec8cc760"
 
 [[package]]
 name = "wasip2"
@@ -4835,6 +4876,9 @@ name = "wit-bindgen"
 version = "0.57.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1ebf944e87a7c253233ad6766e082e3cd714b5d03812acc24c318f549614536e"
+dependencies = [
+ "bitflags 2.13.2",
+]
 
 [[package]]
 name = "wyz"

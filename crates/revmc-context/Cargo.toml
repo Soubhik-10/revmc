@@ -47,3 +47,10 @@ evm = [
     "dep:revm-inspector",
     "dep:revm-state",
 ]
+
+# Enables opaque account payloads in revm; disabled by default.
+account-ext = [
+    "revm-context?/account-ext",
+    "revm-context-interface?/account-ext",
+    "revm-state?/account-ext",
+]

@@ -69,3 +69,13 @@ llvm-prefer-static = ["llvm", "revmc-codegen/llvm-prefer-static", "revmc-llvm?/p
 llvm-prefer-dynamic = ["llvm", "revmc-codegen/llvm-prefer-dynamic", "revmc-llvm?/prefer-dynamic"]
 alloy-evm = ["dep:alloy-evm"]
 asm-keccak = ["revmc-codegen/asm-keccak", "alloy-primitives/asm-keccak"]
+
+# Enables opaque account payloads in revm; disabled by default.
+account-ext = [
+    "revmc-builtins/account-ext",
+    "revmc-codegen/account-ext",
+    "revmc-context/account-ext",
+    "revm-context/account-ext",
+    "revm-context-interface/account-ext",
+    "revm-state/account-ext",
+]
